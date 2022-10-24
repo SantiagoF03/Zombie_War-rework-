@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615a00768c236c447940cabe864b8572, type: 3}
+  m_Name: ZombieBoomer
+  m_EditorClassIdentifier: 
+  _featuresZombie:
+    AttackRange: 10
+    DetactionRange: 15
+    isBoomberZombie: 1
+    isRunnerZombie: 0
+    isCommunZombie: 0
