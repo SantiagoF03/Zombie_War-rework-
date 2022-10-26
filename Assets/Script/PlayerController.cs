@@ -4,17 +4,45 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]private Gun _gun;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<Gun> _gunPrefabs;
+    [SerializeField] private Gun _gun;
+    private int WeaponIndex;
+    private bool isGunFire = true;
+
+    private void Start()
     {
-        
+        ChangeWeapon(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) _gun?.Shoot();
+        if (isGunFire)
+        {
+            StartCoroutine(WeaponFireRate());
+
+        }
         
+    
+    }
+    public void Reload() => _gun?.Reload();
+    public bool isAoutamttickGun()
+    {
+        return _gun.AuttomatickGun;
+
+
+    }
+    public void ChangeWeapon(int index)
+    {
+        WeaponIndex = index;
+        Destroy(_gun?.gameObject);
+        _gun = Instantiate(_gunPrefabs[index], transform);
+        _gun.Reload();
+    }
+    IEnumerator WeaponFireRate()
+    {
+        _gun?.Attack();
+        isGunFire = false;
+        yield return new WaitForSeconds(_gun._fireRate);
+        isGunFire = true;
     }
 }
