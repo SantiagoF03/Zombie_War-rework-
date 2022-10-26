@@ -152,4 +152,4 @@ MonoBehaviour:
   layersToExplosion:
     serializedVersion: 2
     m_Bits: 64
-  partycles: {fileID: 1153030818896968362, guid: cf86c3bcb7ae38248abceb5a51b8b078, type: 3}
+  partycles: {fileID: 0}
