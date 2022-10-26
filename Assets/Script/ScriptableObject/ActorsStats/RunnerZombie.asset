@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: RunnerZombie
   m_EditorClassIdentifier: 
   _stats:
-    MaxLife: 0
-    Speed: 0
+    MaxLife: 175
+    Speed: 10
+    TimeRegenerateLife: 3
+    RegeneratePerSeconds: 25

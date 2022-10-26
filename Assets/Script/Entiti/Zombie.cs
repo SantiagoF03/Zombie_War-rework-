@@ -44,7 +44,6 @@ public class Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _healthController.MaxLife = Life;
         Player = FindObjectOfType<PlayerController>().gameObject;
     }
 

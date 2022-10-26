@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: BoomberZombie
   m_EditorClassIdentifier: 
   _stats:
-    MaxLife: 0
-    Speed: 0
+    MaxLife: 75
+    Speed: 5
+    TimeRegenerateLife: 3
+    RegeneratePerSeconds: 15
