@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: CommunZombie
   m_EditorClassIdentifier: 
   _stats:
-    MaxLife: 100
-    Speed: 2
+    MaxLife: 125
+    Speed: 4
+    TimeRegenerateLife: 3
+    RegeneratePerSeconds: 15
