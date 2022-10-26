@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2869888276383112192}
   - component: {fileID: 2869888276383112195}
   - component: {fileID: 2869888276383112193}
-  m_Layer: 0
+  - component: {fileID: 9121681169909276891}
+  m_Layer: 6
   m_Name: Zomies
   m_TagString: Zombie/Commun
   m_Icon: {fileID: 0}
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2793d273efda6b04eb8d92e48adc616d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxLife: 0
+  _stats: {fileID: 11400000, guid: 740e427c7839bd249a38033dd7491558, type: 2}
   CurrentLife: 0
 --- !u!114 &2869888276383112195
 MonoBehaviour:
@@ -141,3 +142,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &9121681169909276891
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869888276383112204}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

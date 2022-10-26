@@ -247,7 +247,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992873209
 PrefabInstance:
@@ -258,7 +258,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2843336988000352737, guid: 01c1c8bb851599c44a792dc872a13c88, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2843336988000352737, guid: 01c1c8bb851599c44a792dc872a13c88, type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,8 +382,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234660912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0869, y: -2.0831, z: 0}
-  m_LocalScale: {x: 46.537613, y: 34.708317, z: 1}
+  m_LocalPosition: {x: -0.7906, y: -2.0831, z: 0}
+  m_LocalScale: {x: 49.129757, y: 34.708317, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -524,6 +524,7 @@ MonoBehaviour:
   _gunPrefabs:
   - {fileID: 3376248090194466462, guid: 35632003e2c779d4f98ec63a15e18698, type: 3}
   - {fileID: 2477957815026821624, guid: 2aa57e6519c30854e9b9e24c9c78ceac, type: 3}
+  - {fileID: 5277747845254499658, guid: 64e54d159dc5a8a4997f0f85423d9de4, type: 3}
   _gun: {fileID: 0}
 --- !u!114 &1286327656
 MonoBehaviour:
@@ -539,6 +540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon1: 49
   _weapon2: 50
+  _weapon3: 51
   _attack: 323
   _reload: 114
 --- !u!1 &1470019472
@@ -599,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5596493185262599227, guid: 945d8d6aeb48a26418066827b7bbf1df, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5596493185262599227, guid: 945d8d6aeb48a26418066827b7bbf1df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,13 +652,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2869888276383112192, guid: f944fa02865d80441833789cc063b3ad, type: 3}
-      propertyPath: _stats
-      value: 
-      objectReference: {fileID: 11400000, guid: 740e427c7839bd249a38033dd7491558, type: 2}
     - target: {fileID: 2869888276383112194, guid: f944fa02865d80441833789cc063b3ad, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2869888276383112194, guid: f944fa02865d80441833789cc063b3ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -702,17 +700,9 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1286327650}
-    - target: {fileID: 2869888276383112195, guid: f944fa02865d80441833789cc063b3ad, type: 3}
-      propertyPath: _feature
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d4e98883c6acbb40af50d31ef149e02, type: 2}
     - target: {fileID: 2869888276383112204, guid: f944fa02865d80441833789cc063b3ad, type: 3}
       propertyPath: m_Name
       value: Zomie Commun
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869888276383112204, guid: f944fa02865d80441833789cc063b3ad, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f944fa02865d80441833789cc063b3ad, type: 3}

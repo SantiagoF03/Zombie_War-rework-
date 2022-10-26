@@ -16,11 +16,12 @@ public class Granade : MonoBehaviour
     public float Speed => Owner.Stats.BulletSpeed;
     public int Damage => Owner.Stats.BulletDamage;
     public float LifeTime => Owner.Stats.BulletLifeTime;
-    private float _currentLifeTime;
+    public float _currentLifeTime;
     [SerializeField] private float explosionTime;
     [SerializeField] private float explosionRadius;
     [SerializeField] private float explosionIntensity;
     [SerializeField] private LayerMask layersToExplosion;
+    public GameObject partycles;
 
     private float currentExplosionTime;
     void bulletMovement()
@@ -30,14 +31,7 @@ public class Granade : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if (_layerMasks.Contains(collider.gameObject.layer))
-        {
-            GameObject collisionGameObject = collider.gameObject;
-            HealthController objectHealthController = collisionGameObject.GetComponent<HealthController>();
-            objectHealthController?.TakeDamage(10);
-
-            Destroy(this.gameObject);
-        }
+       
     }
 
 
@@ -59,10 +53,11 @@ public class Granade : MonoBehaviour
             DoExplosion();
         }
         _currentLifeTime += Time.deltaTime;
-        if (_currentLifeTime >= LifeTime)
+        if (_currentLifeTime >= explosionTime)
        {
+            Instantiate(partycles);
             Destroy(this.gameObject);
-            Debug.Log("boom");
+            Debug.Log("boom1");
                 
                 
          }
@@ -85,11 +80,13 @@ public class Granade : MonoBehaviour
                 Vector3 direction = targetPosition - transform.position;
                 float distance = direction.magnitude;
                 Vector3 directionNormalized = direction.normalized;
-
+                
                 rigidbody.AddForce(directionNormalized * explosionIntensity, ForceMode2D.Impulse);
+                HealthController objectHealthController = rigidbody.GetComponent<HealthController>();
+                objectHealthController?.TakeDamage(100);
                 Debug.Log("boom2");
             }
-            Debug.Log("boom");
+            
         }
         
 
