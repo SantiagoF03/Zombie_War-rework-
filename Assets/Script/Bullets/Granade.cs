@@ -55,7 +55,7 @@ public class Granade : MonoBehaviour
         _currentLifeTime += Time.deltaTime;
         if (_currentLifeTime >= explosionTime)
        {
-            Instantiate(partycles);
+            Instantiate(partycles, transform.position, transform.rotation);
             Destroy(this.gameObject);
             Debug.Log("boom1");
                 
