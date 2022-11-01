@@ -8,8 +8,6 @@ public class Granade : MonoBehaviour
     private Collider2D _collider;
     [SerializeField] private List<int> _layerMasks;
 
-
-
     public IGun Owner => _owner;
     private IGun _owner;
 
@@ -26,11 +24,6 @@ public class Granade : MonoBehaviour
     private float currentExplosionTime;
    
     
-
-   
-
-
-
     void Start()
     {
        
@@ -94,11 +87,6 @@ public class Granade : MonoBehaviour
         
 
     }
-
-
-  
-
-
     public void SetOwner(IGun gun) => _owner = gun;
 
 }
