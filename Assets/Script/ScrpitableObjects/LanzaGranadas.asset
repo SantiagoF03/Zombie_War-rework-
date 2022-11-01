@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stasts:
     BulletDamage: 30
-    BulletSpeed: 6
-    BulletLifeTime: 6
+    BulletSpeed: -17.99
+    BulletLifeTime: 3
     Cooldown: 2
-    MagSize: 5
+    MagSize: 3
     BulletPrefab: {fileID: 8913299660461384001, guid: bf4013cd5f3348e4e9598f2805b36764, type: 3}

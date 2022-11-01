@@ -38,6 +38,8 @@ public class InputManager : MonoBehaviour
         }
   
         if (Input.GetKeyDown(_reload)) _character.Reload();
+
+
     }
 
     

@@ -24,15 +24,10 @@ public class Granade : MonoBehaviour
     public GameObject partycles;
 
     private float currentExplosionTime;
-    void bulletMovement()
-    {
-        transform.Translate(Vector2.right * (Speed * Time.deltaTime));
-    }
+   
+    
 
-    public void OnTriggerEnter2D(Collider2D collider)
-    {
-       
-    }
+   
 
 
 
@@ -41,21 +36,25 @@ public class Granade : MonoBehaviour
        
         _collider = GetComponent<Collider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
-
+       
     }
 
     void Update()
     {
+        
         currentExplosionTime += Time.deltaTime;
+
+
 
         if(currentExplosionTime >= explosionTime) 
         {
             DoExplosion();
         }
+            
         _currentLifeTime += Time.deltaTime;
         if (_currentLifeTime >= explosionTime)
        {
-            Instantiate(partycles);
+            Instantiate(partycles,transform.position, transform.rotation);
             Destroy(this.gameObject);
             Debug.Log("boom1");
                 
@@ -65,6 +64,10 @@ public class Granade : MonoBehaviour
         bulletMovement();
     }
 
+    void bulletMovement()
+    {
+        transform.Translate(Vector2.right * (Speed * Time.deltaTime));
+    }
     private void DoExplosion()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll((Vector2)transform.position, explosionRadius, layersToExplosion);
@@ -91,6 +94,9 @@ public class Granade : MonoBehaviour
         
 
     }
+
+
+  
 
 
     public void SetOwner(IGun gun) => _owner = gun;

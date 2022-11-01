@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMasks: 06000000
   _currentLifeTime: 0
+  _currentPowerTime: 0
   explosionTime: 5
   explosionRadius: 5
   explosionIntensity: 10
@@ -153,3 +154,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   partycles: {fileID: 1153030818896968362, guid: cf86c3bcb7ae38248abceb5a51b8b078, type: 3}
+  specialPartycles: {fileID: 514735879120345012, guid: 635822dc7440d9a48b748c399613620f, type: 3}
+  PowerTime: 2

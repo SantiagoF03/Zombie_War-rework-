@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stasts:
     BulletDamage: 40
-    BulletSpeed: 4
+    BulletSpeed: 40
     BulletLifeTime: 6
     Cooldown: 6
     MagSize: 3

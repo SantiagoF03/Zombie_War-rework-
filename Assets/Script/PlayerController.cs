@@ -8,10 +8,33 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Gun _gun;
     private int WeaponIndex;
     private bool isGunFire = true;
+    public float LifeTime;
+    public float PowerTime;
+    public float _currentPowerTime;
+    public GameObject Barrier;
 
+    private float _currentLifeTime;
     private void Start()
     {
+        _currentPowerTime = PowerTime;
         ChangeWeapon(0);
+    }
+    private void Update()
+    {
+        _currentPowerTime -= Time.deltaTime;
+        if (_currentPowerTime <= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+
+
+                SpecialAttack();
+               
+                _currentPowerTime = PowerTime;
+            }
+
+        }
+
     }
 
     public void Attack()
@@ -37,6 +60,13 @@ public class PlayerController : MonoBehaviour
         Destroy(_gun?.gameObject);
         _gun = Instantiate(_gunPrefabs[index], transform);
         _gun.Reload();
+    }
+
+    public void SpecialAttack ()
+    {
+
+        Instantiate(Barrier, transform.position, transform.rotation);
+
     }
     IEnumerator WeaponFireRate()
     {
